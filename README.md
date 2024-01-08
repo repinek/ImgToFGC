@@ -1,5 +1,6 @@
 # ImgToFGC
-Convert image to Fall Guys Creative Level!
+Convert image to Fall Guys Creative Level! <br>
+NOTE: Although I don’t believe that you can get banned for this, but be careful!
 
 # Examples
 <img src="https://github.com/repinek/ImgToFGC/assets/137826826/b37c4ddf-8d96-4174-bb7e-6a512e7cf5da" width="400" height="225"/>
@@ -10,7 +11,7 @@ Convert image to Fall Guys Creative Level!
 
 
 # Requirements
-- requirements.txt 
+- requirements.txt (pip install -r requirements.txt)
 - Python 3
 - FallGuysTools for load json map (not necessary if you know how to load map)
 
