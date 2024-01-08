@@ -17,7 +17,7 @@ NOTE: Although I don’t believe that you can get banned for this, but be carefu
 
 # Features 
 - Convert image to Fall Guys Creative 
-- Change Theme
+- Digital/Original Theme
 - Delete white/black pixels
 - Edit colors usage via json in BepInEx/plugins/FallGuysTools
 
