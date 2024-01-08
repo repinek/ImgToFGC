@@ -11,9 +11,11 @@ NOTE: Although I don’t believe that you can get banned for this, but be carefu
 
 
 # Requirements
-- requirements.txt (pip install -r requirements.txt)
-- Python 3
-- FallGuysTools for load json map (not necessary if you know how to load map)
+- For source code:
+1. requirements.txt (pip install -r requirements.txt)
+2. Python 3
+- Exe version
+1. FallGuysTools for load json map (not necessary if you know how to load map)
 
 # Features 
 - Convert image to Fall Guys Creative 
