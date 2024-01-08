@@ -22,7 +22,7 @@ NOTE: Although I don’t believe that you can get banned for this, but be carefu
 - Edit colors usage via json in BepInEx/plugins/FallGuysTools
 
 # Usage
-- With FallGuysTools
+- With [FallGuysTools](https://discord.gg/MpGcpZT4pY)
 1. Set config in GUI
 2. Click "Generate Level"
 3. After generation go to Load creative tab and click "Replace existing maps with level"
