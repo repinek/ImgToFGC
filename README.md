@@ -16,11 +16,9 @@ Can I get banned using this?
 I want to change the colors, but when I go to colors.json I see strange numbers
 > These numbers are the color index.
 If you want to find out the color index, there are two ways to do this:
-
 - default method
 1. Place floor
 2. the floor is placed with index color 0, and each subsequent color is +1 to the index. That it, if you change the color 2 times then you get index 2
-
 - via Unity Explorer
 1. place floor
 2. find it in Object Explorer. Its name is Placeable_Floor_Soft_Original(Clone) (or Placeable_Floor_Soft_Retro(Clone) if you are using the Digital theme)
