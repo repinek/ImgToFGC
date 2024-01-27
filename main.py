@@ -1,4 +1,3 @@
-import PIL.Image
 from PIL import Image
 import webcolors
 import json
@@ -90,7 +89,7 @@ except Exception as e:
     exit()
 
 try:
-    image = PIL.Image.open(image_input)
+    image = Image.open(image_input)
     image = image.transpose(method=Image.FLIP_LEFT_RIGHT)
 except OSError:
     print("didnt found image with path", image_input + "\n")
@@ -123,6 +122,7 @@ except Exception as e:
     print(f"send this to repinek. {e.__traceback__.tb_lineno}, {e}\n")
     os.system("pause")
     exit()
+
 if width_input_int > width:
     print("width cant be more than original pic\n")
     os.system("pause")
@@ -153,16 +153,16 @@ rgb_colors = []
 real_colors = {
     "original": {
         "aqua": 4,
-        "gray": 8,
-        "silver": 9,
+        "gray": 18,
+        "silver": 17,
         "navy": 12,
-        "black": 14,
+        "black": 19,
         "green": 13,
         "teal": 10,
         "olive": 9,
         "blue": 12,
-        "lime": 10,
-        "white": 9,
+        "lime": 13,
+        "white": 16,
         "purple": 14,
         "fuchsia": 1,
         "maroon": 11,
