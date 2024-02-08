@@ -57,7 +57,7 @@ shouldDeleteWhitePixels = False/True
 isDigital = False/True
 ```
 2. Run ImgToFGC
-3. After generation the map file will be saved in "AppData\LocalLow\Mediatonic\FallGuys_client\" with name "myfile.json"
+3. After generation the map file will be saved in "AppData\LocalLow\Mediatonic\FallGuys_client\" with name "Img2FGC.json"
 4. Now, you need to load this json file in to the game, good luck! (if you dont know how to do it, use FallGuysTools)
 
 ## Credits
