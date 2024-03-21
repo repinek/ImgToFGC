@@ -10,14 +10,14 @@ import getpass
 user_name = getpass.getuser()
 
 file_path_output = "C:\\Users\\" + user_name + "\\AppData\\LocalLow\\Mediatonic\\FallGuys_client\\output.txt"
-my_file = "C:\\Users\\" + user_name + "\\AppData\\LocalLow\\Mediatonic\\FallGuys_client\\Img2FGC.json"
+FGC_json = "C:\\Users\\" + user_name + "\\AppData\\LocalLow\\Mediatonic\\FallGuys_client\\Img2FGC.json"
 
 # reading output.txt by mod
 try:
     with open(file_path_output, "r", encoding="utf-8") as f1:
         lines = f1.readlines()
 except FileNotFoundError:
-    print(Fore.LIGHTRED_EX + "File doesnt found" + Style.RESET_ALL + ", try again\n")
+    print(Fore.LIGHTRED_EX + "Unable to find file " + Style.RESET_ALL + ", try again\n")
     os.system("pause")
     exit()
 
@@ -38,11 +38,11 @@ for line in lines:
         elif key == 'isDigital':
             isDigital = value.lower() # I know there are better ways to do this, but I'm lazy
     except FileNotFoundError:
-        print(Fore.LIGHTRED_EX + "File doesnt found" + Style.RESET_ALL + ", try again\n")
+        print(Fore.LIGHTRED_EX + "Unable to find file" + Style.RESET_ALL + ", try again\n")
         os.system("pause")
         exit()
     except Exception as e:
-        print(f"File " + Fore.LIGHTRED_EX + "corrupted" + Style.RESET_ALL + ", try again, if error doesnt continue tell " + Fore.LIGHTYELLOW_EX + "repinek, " + Style.RESET_ALL + "{e}, {e.__traceback__.tb_lineno}\n")
+        print(f"Looks like file " + Fore.LIGHTRED_EX + " is corrupted" + Style.RESET_ALL + ", try again, if you can't fix this error by yourself tell " + Fore.LIGHTYELLOW_EX + "repinek about this, " + Style.RESET_ALL + "{e}, {e.__traceback__.tb_lineno}\n")
         os.system("pause")
         exit()
 
@@ -51,7 +51,7 @@ if shouldDeleteWhitePixels == "false":
 elif shouldDeleteWhitePixels == "true":
     white_yes_or_no = "yes"
 else:
-    print("something went wrong, write" + Fore.LIGHTYELLOW_EX + " repinek" + Style.RESET_ALL + ", 49\n")
+    print("Something went wrong, report about this to " + Fore.LIGHTYELLOW_EX + " repinek" + Style.RESET_ALL + ", 49\n")
     os.system("pause")
     exit()
 if shouldDeleteBlackPixels == "false":
@@ -59,7 +59,7 @@ if shouldDeleteBlackPixels == "false":
 elif shouldDeleteBlackPixels == "true":
     black_yes_or_no = "yes"
 else:
-    print("something went wrong, write" + Fore.LIGHTYELLOW_EX + " repinek" + Style.RESET_ALL + ", 57\n")
+    print("Something went wrong, report about this to " + Fore.LIGHTYELLOW_EX + " repinek" + Style.RESET_ALL + ", 57\n")
     os.system("pause")
     exit()
 
@@ -68,13 +68,13 @@ if isDigital == "false":
 elif isDigital == "true":
     theme = "digital"
 else:
-    print("something went wrong, write" + Fore.LIGHTYELLOW_EX + " repinek" + Style.RESET_ALL + ", 66\n")
+    print("Something went wrong, report about this to " + Fore.LIGHTYELLOW_EX + " repinek" + Style.RESET_ALL + ", 66\n")
     os.system("pause")
     exit()
 
 print(Fore.LIGHTCYAN_EX + "NOTE: Although I don’t believe that you can get " + Fore.LIGHTRED_EX + "banned " + Fore.LIGHTCYAN_EX + "for this, but " + Fore.LIGHTGREEN_EX + "be careful!"+ Fore.LIGHTRED_EX + " Don't use this script if you want to import NSFW or if you are stupid\n\n" +
       Style.RESET_ALL + "You cannot save maps larger than " + Fore.LIGHTRED_EX + "2MB" + Fore.LIGHTGREEN_EX + " (around 700 pixels)\n" +
-      Fore.LIGHTGREEN_EX + "1000 pixels" + Style.RESET_ALL + " are generated in approximately" + Fore.LIGHTGREEN_EX + " 1 second\n\n" +
+      Fore.LIGHTGREEN_EX + "1000 pixels" + Style.RESET_ALL + " are generated in ~" + Fore.LIGHTGREEN_EX + " one second\n\n" +
       Style.RESET_ALL + "Script created by " + Fore.LIGHTYELLOW_EX + "repinek" + Style.RESET_ALL + " (" + Fore.LIGHTYELLOW_EX + "@repinek " + Style.RESET_ALL + "in " + Fore.LIGHTCYAN_EX + "tg/ds" + Style.RESET_ALL + ", " + Fore.LIGHTYELLOW_EX + "@repinek840" + Style.RESET_ALL + " in X), and thanks " + Fore.LIGHTGREEN_EX + "FloyzI " + Style.RESET_ALL + "for help\n") # добавить про кал с долгой герекой
 try:
     print(Fore.LIGHTGREEN_EX + "config:\n" + Style.RESET_ALL +
@@ -105,36 +105,36 @@ width, height = image.size
 try:
     width_input_int = int(width_input)
 except TypeError:
-    print("width must be a number\n")
+    print("Width should be as number\n")
     os.system("pause")
     exit()
 except Exception as e:
-    print(f"send this to repinek. {e.__traceback__.tb_lineno}, {e}\n")
+    print(f"Report about this to repinek. {e.__traceback__.tb_lineno}, {e}\n")
     os.system("pause")
     exit()
 try:
     height_input_int = int(height_input)
 except TypeError:
-    print("height must be a number\n")
+    print("Height should be as number\n")
     os.system("pause")
     exit()
 except Exception as e:
-    print(f"send this to repinek. {e.__traceback__.tb_lineno}, {e}\n")
+    print(f"Report about this to repinek. {e.__traceback__.tb_lineno}, {e}\n")
     os.system("pause")
     exit()
 
 if width_input_int > width:
-    print("width cant be more than original pic\n")
+    print("Width can't be more than image width\n")
     os.system("pause")
     exit()
 elif height_input_int > height:
-    print("height cant be more than original pic\n")
+    print("Height can't be more than image height\n")
     os.system("pause")
     exit()
 try:
     image = image.resize((width_input_int, height_input_int))
 except Exception as e:
-    print(f"send this to repinek. {e.__traceback__.tb_lineno}, {e}\n")
+    print(f"Report about this to repinek. {e.__traceback__.tb_lineno}, {e}\n")
     os.system("pause")
     exit()
 
@@ -142,12 +142,12 @@ except Exception as e:
 # black_yes_or_no = input("delete all black pixels? ('yes' or 'no'): ")
 # ↑ old code
 
-print("after" + Fore.LIGHTGREEN_EX + " 5 seconds " + Style.RESET_ALL + "script will start making the map and DEBUG prints will be shown, don't worry (BETA TEST)\n"
-"if suddenly you get an error, write repinek in dm, thank")
+print("After" + Fore.LIGHTGREEN_EX + " 5 seconds " + Style.RESET_ALL + "map should start generating, you will see some debug info (BETA)\n"
+"If you get some errors report about them to repinek, thanks")
 time.sleep(5)
 
 a = "no alpha"
-width, height = image.size # again
+width, height = image.size # again (sigma)
 rgb_colors = []
 # default colors
 real_colors = {
@@ -200,12 +200,12 @@ try:
     with open(full_path_tolko_u_menya, 'r', encoding='utf-8') as file_kek:
         data = json.load(file_kek) # im a furry btw
 except FileNotFoundError:
-    print(Fore.LIGHTRED_EX + f"colors.json file was not found" + Style.RESET_ALL + f", a new file will be created along the path {full_path_tolko_u_menya} with " + Fore.LIGHTGREEN_EX + f"recommended colors" + Style.RESET_ALL)
+    print(Fore.LIGHTRED_EX + f"Unable to find colors.json " + Style.RESET_ALL + f", a new colors.json will be generated by this path {full_path_tolko_u_menya} with " + Fore.LIGHTGREEN_EX + f"recommended colors" + Style.RESET_ALL)
     with open(full_path_tolko_u_menya, 'w') as f2:
         json.dump(real_colors, f2)
         data = real_colors
 except Exception as e:
-    print(f"send this to repinek. {e.__traceback__.tb_lineno}, {e}")
+    print(f"Report about this to repinek. {e.__traceback__.tb_lineno}, {e}")
     os.system("pause")
     exit()
 
@@ -313,25 +313,25 @@ if theme == 'digital':
     kek["SkyboxId"] = 'Retro_Skybox'
 
 # its shitcode, but i dont care (im so lazy to found other solution)
-with open(my_file, 'w') as f:
+with open(FGC_json, 'w') as f:
     f.write(json.dumps(kek))
-with open(my_file, 'rb+') as fh:
+with open(FGC_json, 'rb+') as fh:
     fh.seek(-3, 2)
     fh.truncate()
-with open(my_file, 'a') as f:
+with open(FGC_json, 'a') as f:
     f.write("[")
 
 # for global
-my_variable = "kek"
-my_variable2 = "obed"
+variant_guid = "kek"
+guids_sss = "obed"
 
 #func for add pixels to json (experimental)
 def addpixeltojson():
     global id_number
     global data
-    global my_file
-    global my_variable
-    global my_variable2
+    global FGC_json
+    global variant_guid
+    global guids_sss
     id_number = id_number - 1
     data["ID"] = id_number
     data["Position"][0] = x * 4.075
@@ -339,13 +339,13 @@ def addpixeltojson():
     data["ColourSwapIndex"] = closest_value
     random_key = uuid.uuid4()
     formatted_key = str(random_key).replace('-', '')
-    my_variable = f"{formatted_key[:8]}-{formatted_key[8:12]}-{formatted_key[12:16]}-{formatted_key[16:20]}-{formatted_key[20:]}"
+    variant_guid = f"{formatted_key[:8]}-{formatted_key[8:12]}-{formatted_key[12:16]}-{formatted_key[16:20]}-{formatted_key[20:]}"
     random_key2 = uuid.uuid4()
     formatted_key2 = str(random_key2).replace('-', '')
-    my_variable2 = f"{formatted_key2[:8]}-{formatted_key2[8:12]}-{formatted_key2[12:16]}-{formatted_key2[16:20]}-{formatted_key2[20:]}"
-    data["GUIDs"] = my_variable2
-    data["VariantGuid"] = my_variable
-    with open(my_file, "a") as f:
+    guids_sss = f"{formatted_key2[:8]}-{formatted_key2[8:12]}-{formatted_key2[12:16]}-{formatted_key2[16:20]}-{formatted_key2[20:]}"
+    data["GUIDs"] = guids_sss
+    data["VariantGuid"] = variant_guid
+    with open(FGC_json, "a") as f:
         f.write(json.dumps(data, ensure_ascii=False))
         f.write(",")
 # every pixel
@@ -395,13 +395,13 @@ for x in range(width):
                     # addpixeltojson()
                 #dont needed anymore
                 else:
-                    print("Alpha is 0, dont print pixel")
+                    print("Alpha is 0, unable to set pixel")
                     continue
             except Exception as e:
-                print(f"send this to repinek. {e.__traceback__.tb_lineno}, {e}")
+                print(f"Report about this to repinek. {e.__traceback__.tb_lineno}, {e}")
             posx = x * 4.075
             posy = y * 4.075
-            print(f"rgb: {pixel}, alpha: {a}, name color: {closest_name}, color index: {closest_value}, ID object: {id_number}, POS X: {posx}, POS Y: {posy}, VatirantGuid: {my_variable}, GUIDs: {my_variable2}")
+            print(f"RGB: {pixel}, alpha: {a}, color name: {closest_name}, color index: {closest_value}, object ID: {id_number}, POS X: {posx}, POS Y: {posy}, VatirantGuid: {variant_guid}, GUIDs: {guids_sss}")
             # my old bad code below, fixed by a = 0, 359 line
             '''
             except TypeError:
@@ -412,25 +412,25 @@ for x in range(width):
                 data["ColourSwapIndex"] = closest_value
                 random_key = uuid.uuid4()
                 formatted_key = str(random_key).replace('-', '')
-                my_variable = f"{formatted_key[:8]}-{formatted_key[8:12]}-{formatted_key[12:16]}-{formatted_key[16:20]}-{formatted_key[20:]}"
+                variant_guid = f"{formatted_key[:8]}-{formatted_key[8:12]}-{formatted_key[12:16]}-{formatted_key[16:20]}-{formatted_key[20:]}"
                 random_key2 = uuid.uuid4()
                 formatted_key2 = str(random_key2).replace('-', '')
-                my_variable2 = f"{formatted_key2[:8]}-{formatted_key2[8:12]}-{formatted_key2[12:16]}-{formatted_key2[16:20]}-{formatted_key2[20:]}"
-                data["GUIDs"] = my_variable2
-                data["VariantGuid"] = my_variable
+                guids_sss = f"{formatted_key2[:8]}-{formatted_key2[8:12]}-{formatted_key2[12:16]}-{formatted_key2[16:20]}-{formatted_key2[20:]}"
+                data["GUIDs"] = guids_sss
+                data["VariantGuid"] = variant_guid
 
-                with open(my_file, "a") as f:
+                with open(FGC_json, "a") as f:
                     f.write(json.dumps(data, ensure_ascii=False))
                     f.write(",")
                 '''
 
 # its shitcode x2, but i dont care (im so lazy to found other solution)
-with open(my_file, 'rb+') as fh:
+with open(FGC_json, 'rb+') as fh:
     fh.seek(-1, 2)
     fh.truncate()
-with open(my_file, 'a') as f:
+with open(FGC_json, 'a') as f:
     f.write("],")
-with open(my_file, 'a') as f:
+with open(FGC_json, 'a') as f:
     f.write('"FirstBuildSessionId": "38f4bbc0-3978-4194-b3e7-463f1a25e2ee",')
     f.write(' "LevelCreationTimestamp": 1703262048686,')
     f.write(' "LevelSavedAtTimestamp": 1703262185389,')
@@ -440,6 +440,6 @@ with open(my_file, 'a') as f:
     f.write(' "LevelDescriptionIsCustom": false,')
     f.write(' "Min Capacity": 1}')
 
-print("generation is completed, press \"Replace existing maps with level\" in FallGuysTools to load your level\n") #yea, use FGTools guys
-# os.remove(file_path_output)
+print("Generation completed! Press \"Replace existing maps with level\" in FallGuysTools to load your level\n") #yea, use FGTools guys
+os.remove(file_path_output)
 time.sleep(3)
