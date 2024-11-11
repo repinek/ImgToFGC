@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> This repository is deprecated, use the [Loamfy fork](https://github.com/Loamfy/img2FGC_v2)
+
+
 # ImgToFGC
 Convert image to Fall Guys Creative Level! <br>
 NOTE: Although I don’t believe that you can get banned for this, but be careful!
