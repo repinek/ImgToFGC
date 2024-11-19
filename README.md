@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> This repository is deprecated, use the [Loamfy fork](https://github.com/Loamfy/img2FGC_v2)
+> This repository is no longer maintained. For an updated version with HEX color support and more, please use fork: [Loamfy fork](https://github.com/Loamfy/img2FGC_v2)
 
 
 # ImgToFGC
